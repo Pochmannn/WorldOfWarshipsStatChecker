@@ -13,6 +13,10 @@
   }
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
