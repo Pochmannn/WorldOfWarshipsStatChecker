@@ -1,4 +1,4 @@
-function Warship(){
+function BestWarship(){
     return(
         <div className="flex flex-row mt-5">
             <div className="bg-gray-300 basis-1/2 h-64 ml-6 mr-6 rounded-md flex grow drop-shadow-lg">
@@ -25,4 +25,4 @@ function Warship(){
         </div>
     )
 }
-export default Warship
+export default BestWarship
