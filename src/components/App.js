@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css';
 import Navbar from './Navbar';
+import LogoContent from './LogoContent'
 import Content from './Content';
 import Footer from './Footer';
 import axios from 'axios';
@@ -31,12 +32,7 @@ class App extends React.Component{
     maxXpShipBattles: 0
   }
   }
-/* 
-TUDU
-- rozbić fetch na 2 funkcje na komponent didmount
-- pobierać obiekt na boga mego świętego jezuza chrystusa
-- 
-*/
+
 
 
 onSearchSubmit = nickname => {
@@ -104,12 +100,25 @@ onSearchSubmit = nickname => {
 
 render(){
   return (
-    <div className="bg-gray-700 w-full h-full">
+    <div className="bg-gray-400 w-full h-full">
       <Navbar/>
-      <Content onSearchSubmit={this.onSearchSubmit} accountid={this.state.accountid} battles={this.state.battles} maxXpShipBattles={this.state.maxXpShipBattles}/>
+      <LogoContent> </LogoContent>
+      <Content onSearchSubmit={this.onSearchSubmit} accountid={this.state.accountid} battles={this.state.battles} 
+        xp={this.state.xp}
+        wins={this.state.wins} damageDealt={this.state.damageDealt} survivedBattles={this.state.survivedBattles} 
+        frags={this.state.frags} 
+      //hits={this.state.hits} 
+          shots={this.state.shots}
+          planesFrags={this.state.planesFrags} maxXp={this.state.maxXp} maxDamageDealt={this.state.maxDamageDealt}  
+          maxFrags={this.state.maxFrags} maxPlanesDestroyed={this.state.maxPlanesDestroyed} maxFragsMainBattery={this.state.maxFragsMainBattery}
+          maxFragsTorpedoes={this.state.maxFragsTorpedoes} maxFragsPlanes={this.state.maxFragsPlanes}  
+      />
+      <LogoContent> </LogoContent>
       <Footer/>
     </div>
   )}
 }
 
 export default App;
+
+

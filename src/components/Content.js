@@ -8,7 +8,25 @@ class Content extends React.Component{
 
 constructor(props){
     super(props)
-    this.state = {isLoading: true, user:{},nickname: "",battles: ""}
+    this.state = {isLoading: true, user:{},nickname: "",
+    battles: "", 
+    wins: 0, 
+    xp: 0, 
+    damageDealt: 0,
+    survivedBattles: 0,
+    frags: 0,
+    hits: 0,
+    shots: 0,
+    planesFrags: 0,
+    maxXp: 0,
+    maxDamageDealt: 0,
+    maxFrags: 0,
+    maxPlanesDestroyed: 0,
+    maxFragsMainBattery: 0,
+    maxFragsTorpedoes: 0,
+    maxFragsPlanes: 0,
+    maxXpShipId: "",
+    maxXpShipBattles: 0}
 }
 
     onInputChange = event => {
@@ -22,21 +40,50 @@ constructor(props){
 
     render() {
         return(   
-            <div className="bg-gray-500 w-4/5 ml-auto mt-9 mb-9 mr-auto p-3 border-black rounded-lg drop-shadow-2xl">
-                <span className="text-black italic font-black ml-3 mr-auto text-4xl">Statki oguem statystki:</span><br />
+            
+            <div className="bg-zinc-800 w-4/5 ml-auto mt-0 mb-0 mr-auto p-3 border-black rounded-lg drop-shadow-2xl">
+                <span className="text-gray-300 italic font-black ml-7 mr-auto text-5xl border-2 border-indigo-800 bg-gray-900
+                 rounded-lg">World of Warships Statistics</span><br />
                 <form className="mt-3 ml-3" 
                 onSubmit={this.onFormSubmit}>
-                    <label class="text-black italic font-black  ml-auto mr-auto text-2xl">Wpisuj nick swój panie kolego: </label>
-                    <input type="text" className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    <label class="text-gray-300 italic font-black ml-7 mr-auto text-2xl border-2 border-indigo-800 bg-gray-900
+                 rounded-lg">Write down your Nickname to start </label>
+                    <input type="text" className="ml-4 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     onChange={this.onInputChange} 
                     value={this.state.nickname}/> 
                     
                 </form>
-                <MainStats accountid={this.props.accountid} battles={this.props.battles} />
+                <MainStats accountid={this.props.accountid} battles={this.props.battles} wins={this.props.wins} xp={this.props.xp}
+                        damageDealt={this.props.damageDealt} survivedBattles={this.props.survivedBattles} 
+                        frags={this.props.frags} 
+                    //hits={this.props.hits} 
+                        shots={this.props.shots}
+                        planesFrags={this.props.planesFrags} maxXp={this.props.maxXp} maxDamageDealt={this.props.maxDamageDealt}  
+                        maxFrags={this.props.maxFrags} maxPlanesDestroyed={this.props.maxPlanesDestroyed} maxFragsMainBattery={this.props.maxFragsMainBattery}
+                        maxFragsTorpedoes={this.props.maxFragsTorpedoes} maxFragsPlanes={this.props.maxFragsPlanes}
+                />
                 <hr className="mt-6 w-5/6 ml-auto mr-auto rounded-2xl drop-shadow-lg"/>
-                <DetailedStats />
+                <DetailedStats accountid={this.props.accountid} battles={this.props.battles} wins={this.props.wins} xp={this.props.xp}
+                        damageDealt={this.props.damageDealt} survivedBattles={this.props.survivedBattles} 
+                        frags={this.props.frags} 
+                    //hits={this.props.hits} 
+                        shots={this.props.shots}
+                        planesFrags={this.props.planesFrags} maxXp={this.props.maxXp} maxDamageDealt={this.props.maxDamageDealt}  
+                        maxFrags={this.props.maxFrags} maxPlanesDestroyed={this.props.maxPlanesDestroyed} maxFragsMainBattery={this.props.maxFragsMainBattery}
+                        maxFragsTorpedoes={this.props.maxFragsTorpedoes} maxFragsPlanes={this.props.maxFragsPlanes}
+                
+                />
                 <hr className="mt-6 w-5/6 ml-auto mr-auto rounded-2xl drop-shadow-lg"/>
-                <Armament />
+                <Armament accountid={this.props.accountid} battles={this.props.battles} wins={this.props.wins} xp={this.props.xp}
+                        damageDealt={this.props.damageDealt} survivedBattles={this.props.survivedBattles} 
+                        frags={this.props.frags} 
+                    //hits={this.props.hits} 
+                        shots={this.props.shots}
+                        planesFrags={this.props.planesFrags} maxXp={this.props.maxXp} maxDamageDealt={this.props.maxDamageDealt}  
+                        maxFrags={this.props.maxFrags} maxPlanesDestroyed={this.props.maxPlanesDestroyed} maxFragsMainBattery={this.props.maxFragsMainBattery}
+                        maxFragsTorpedoes={this.props.maxFragsTorpedoes} maxFragsPlanes={this.props.maxFragsPlanes}
+                
+                />
                 <hr className="mt-6 w-5/6 ml-auto mr-auto rounded-2xl drop-shadow-lg"/>
                 {/* <BestWarship /> */}
             </div>
