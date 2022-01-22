@@ -9,12 +9,14 @@ function BestWarship(){
                     <div className="w-1/2 ml-3">
                         <p className="text-2xl font-bold">Najlepszy okręt:</p>
                         <p className="text-xl">Bitwy:</p>
+                        <p className="text-xl">Rekord doświadczenia:</p>
                         <p className="text-xl">Zwycięstwa:</p>
                         <p className="text-xl">Zniszczone okręty:</p>
                         <p className="text-xl">Przetrwane bitwy:</p>
                     </div>
                     <div className="w-1/2 text-right mr-3">
                         <p className="text-2xl font-bold">Graf Zappelin</p>
+                        <p className="text-xl">2137</p>
                         <p className="text-xl">2137</p>
                         <p className="text-xl">2137</p>
                         <p className="text-xl">2137</p>

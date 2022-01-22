@@ -29,8 +29,8 @@ constructor(props){
                     <label class="text-black italic font-black  ml-auto mr-auto text-2xl">Wpisuj nick swój panie kolego: </label>
                     <input type="text" className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     onChange={this.onInputChange} 
-                    value={this.state.nickname}/> {this.props.accountid}{this.props.battles}
-                    Pierdolnij enter żeby pokazać staty ( nie działa na razie przykro mi)
+                    value={this.state.nickname}/> 
+                    
                 </form>
                 <MainStats accountid={this.props.accountid} battles={this.props.battles} />
                 <hr className="mt-6 w-5/6 ml-auto mr-auto rounded-2xl drop-shadow-lg"/>
@@ -38,7 +38,7 @@ constructor(props){
                 <hr className="mt-6 w-5/6 ml-auto mr-auto rounded-2xl drop-shadow-lg"/>
                 <Armament />
                 <hr className="mt-6 w-5/6 ml-auto mr-auto rounded-2xl drop-shadow-lg"/>
-                <BestWarship />
+                {/* <BestWarship /> */}
             </div>
         )
     }
