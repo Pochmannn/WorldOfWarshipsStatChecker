@@ -32,7 +32,7 @@ class App extends React.Component{
     maxXpShipBattles: 0
   }
   }
-
+  
 
 
 onSearchSubmit = nickname => {
@@ -107,7 +107,7 @@ render(){
         xp={this.state.xp}
         wins={this.state.wins} damageDealt={this.state.damageDealt} survivedBattles={this.state.survivedBattles} 
         frags={this.state.frags} 
-      //hits={this.state.hits} 
+      hits={this.state.hits} 
           shots={this.state.shots}
           planesFrags={this.state.planesFrags} maxXp={this.state.maxXp} maxDamageDealt={this.state.maxDamageDealt}  
           maxFrags={this.state.maxFrags} maxPlanesDestroyed={this.state.maxPlanesDestroyed} maxFragsMainBattery={this.state.maxFragsMainBattery}

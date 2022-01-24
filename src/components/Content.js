@@ -28,7 +28,7 @@ constructor(props){
     maxXpShipId: "",
     maxXpShipBattles: 0}
 }
-
+    
     onInputChange = event => {
         this.setState({nickname: event.target.value})
     }
@@ -43,11 +43,11 @@ constructor(props){
             
             <div className="bg-zinc-800 w-4/5 ml-auto mt-0 mb-0 mr-auto p-3 border-black rounded-lg drop-shadow-2xl">
                 <span className="text-gray-300 italic font-black ml-7 mr-auto text-5xl border-2 border-indigo-800 bg-gray-900
-                 rounded-lg">World of Warships Statistics</span><br />
+                 rounded-lg">World of Warships Statystyki</span><br />
                 <form className="mt-3 ml-3" 
                 onSubmit={this.onFormSubmit}>
                     <label class="text-gray-300 italic font-black ml-7 mr-auto text-2xl border-2 border-indigo-800 bg-gray-900
-                 rounded-lg">Write down your Nickname to start </label>
+                 rounded-lg">Wpisz nick </label>
                     <input type="text" className="ml-4 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     onChange={this.onInputChange} 
                     value={this.state.nickname}/> 
@@ -56,7 +56,7 @@ constructor(props){
                 <MainStats accountid={this.props.accountid} battles={this.props.battles} wins={this.props.wins} xp={this.props.xp}
                         damageDealt={this.props.damageDealt} survivedBattles={this.props.survivedBattles} 
                         frags={this.props.frags} 
-                    //hits={this.props.hits} 
+                    hits={this.props.hits} 
                         shots={this.props.shots}
                         planesFrags={this.props.planesFrags} maxXp={this.props.maxXp} maxDamageDealt={this.props.maxDamageDealt}  
                         maxFrags={this.props.maxFrags} maxPlanesDestroyed={this.props.maxPlanesDestroyed} maxFragsMainBattery={this.props.maxFragsMainBattery}
@@ -66,7 +66,7 @@ constructor(props){
                 <DetailedStats accountid={this.props.accountid} battles={this.props.battles} wins={this.props.wins} xp={this.props.xp}
                         damageDealt={this.props.damageDealt} survivedBattles={this.props.survivedBattles} 
                         frags={this.props.frags} 
-                    //hits={this.props.hits} 
+                    hits={this.props.hits} 
                         shots={this.props.shots}
                         planesFrags={this.props.planesFrags} maxXp={this.props.maxXp} maxDamageDealt={this.props.maxDamageDealt}  
                         maxFrags={this.props.maxFrags} maxPlanesDestroyed={this.props.maxPlanesDestroyed} maxFragsMainBattery={this.props.maxFragsMainBattery}
@@ -77,7 +77,7 @@ constructor(props){
                 <Armament accountid={this.props.accountid} battles={this.props.battles} wins={this.props.wins} xp={this.props.xp}
                         damageDealt={this.props.damageDealt} survivedBattles={this.props.survivedBattles} 
                         frags={this.props.frags} 
-                    //hits={this.props.hits} 
+                    hits={this.props.hits} 
                         shots={this.props.shots}
                         planesFrags={this.props.planesFrags} maxXp={this.props.maxXp} maxDamageDealt={this.props.maxDamageDealt}  
                         maxFrags={this.props.maxFrags} maxPlanesDestroyed={this.props.maxPlanesDestroyed} maxFragsMainBattery={this.props.maxFragsMainBattery}
