@@ -51,7 +51,10 @@ constructor(props){
                     <input type="text" className="ml-4 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     onChange={this.onInputChange} 
                     value={this.state.nickname}/>
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={this.onInputChange} value={this.state.nickname}>Szukaj</button>
+                    <button class="text-gray-300 italic font-black ml-7 mr-auto text-2xl border-2 border-indigo-800 bg-gray-900
+                 rounded-lg" onClick={this.onInputChange} value={this.state.nickname}>
+                        Szukaj
+                    </button>
                     <span class="text-gray-300 italic font-black ml-7 mr-auto text-2xl  border-indigo-800 bg-gray-900
                  rounded-lg">{this.props.username}</span>
                     
