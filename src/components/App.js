@@ -12,6 +12,7 @@ class App extends React.Component{
   constructor(props){
     super(props)
     this.state={accountid: "", 
+    username: "",
     battles: "", 
     wins: 0, 
     xp: 0, 
@@ -39,8 +40,10 @@ onSearchSubmit = nickname => {
   console.log(nickname)
   axios.get(`https://api.worldofwarships.eu/wows/account/list/?application_id=b0f4d669a9745f5dd7eb16395de839be&search=${nickname}`,{
     }).then(result => {
-      this.setState({accountid: result.data.data[0].account_id})
+      this.setState({accountid: result.data.data[0].account_id,
+      username: result.data.data[0].nickname})
       console.log(this.state.accountid)
+      console.log(this.state.username)
       axios.get(`https://api.worldofwarships.eu/wows/account/info/?application_id=b0f4d669a9745f5dd7eb16395de839be&account_id=${this.state.accountid}`,{
         }).then(result => {
           this.setState({battles: result.data.data[this.state.accountid].statistics.pvp.battles, 
@@ -111,7 +114,7 @@ render(){
           shots={this.state.shots}
           planesFrags={this.state.planesFrags} maxXp={this.state.maxXp} maxDamageDealt={this.state.maxDamageDealt}  
           maxFrags={this.state.maxFrags} maxPlanesDestroyed={this.state.maxPlanesDestroyed} maxFragsMainBattery={this.state.maxFragsMainBattery}
-          maxFragsTorpedoes={this.state.maxFragsTorpedoes} maxFragsPlanes={this.state.maxFragsPlanes}  
+          maxFragsTorpedoes={this.state.maxFragsTorpedoes} maxFragsPlanes={this.state.maxFragsPlanes}  username={this.state.username}
       />
       <LogoContent> </LogoContent>
       <Footer/>

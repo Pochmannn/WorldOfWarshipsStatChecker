@@ -52,7 +52,7 @@ function DetailedStats(props){
             <div className="bg-indigo-500 basis-1/3 h-64 ml-6 mr-6 rounded-md flex drop-shadow-lg border-4 border-gray-400">
                 <div className="flex flex-row w-full mt-3">
                     <div className="w-1/2 ml-3">
-                        <p className="text-gray-300 italic font-black  text-2xl border-2 border-indigo-800 bg-gray-900
+                        <p className="text-gray-300 italic font-black  text-xl border-2 border-indigo-800 bg-gray-900
                  rounded-lg">Rekordowy wynik</p>
                         <p className="text-xl">Doświadczenie:</p>
                         <p className="text-xl">Zadane uszkodzenia:</p>
@@ -60,7 +60,7 @@ function DetailedStats(props){
                         <p className="text-xl">Zniszczone samoloty:</p>
                     </div>
                     <div className="w-1/2 text-right mr-3  ">
-                        <p className="text-gray-300 italic font-black  text-2xl border-2 border-indigo-800 bg-gray-900
+                        <p className="text-gray-300 italic font-black  text-xl border-2 border-indigo-800 bg-gray-900
                  rounded-lg">.</p>
                         <p className={`text-center text-xl font-semibold ${props.maxXp === 0 ? 'hidden' : ''}`}>{props.maxXp}</p>
                         <p className={`text-center text-xl font-semibold ${props.maxDamageDealt === 0 ? 'hidden' : ''}`}>{props.maxDamageDealt}</p>
